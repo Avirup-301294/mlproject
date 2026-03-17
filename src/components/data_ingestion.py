@@ -3,9 +3,9 @@ import sys
 
 # Ensure the project root is on sys.path so imports like "from src..." work when
 # running this file directly (e.g., `python src/components/data_ingestion.py`).
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
+# ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
+# if ROOT_DIR not in sys.path:
+#     sys.path.insert(0, ROOT_DIR)
 
 from src.exception import CustomException
 from src.logger import logging
@@ -41,7 +41,7 @@ class DataIngestion:
 
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
 
-            logging.info("Ingestion of the data iss completed")
+            logging.info("Ingestion of the data is completed")
 
             return(
                 self.ingestion_config.train_data_path,
@@ -49,7 +49,3 @@ class DataIngestion:
             )
         except Exception as e:
             raise CustomException(e,sys)
-        
-if __name__=="__main__":
-    obj=DataIngestion()
-    train_data,test_data=obj.initiate_data_ingestion()
