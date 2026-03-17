@@ -1,9 +1,3 @@
-"""Entry point for running the data ingestion + transformation pipeline.
-
-Run from the project root:
-    python main.py
-"""
-
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import ModelTrainer
