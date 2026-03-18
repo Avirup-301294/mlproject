@@ -99,3 +99,11 @@ Logs are stored under the `logs/` directory. Each run generates a new timestampe
 - Add Dockerfile / containerization for consistent deployment
 - Add CI/CD pipeline to run tests + retrain + deploy
 - Add input validation + error handling for the web form
+
+---
+
+## 📦 Deployment & Runbook
+
+This repo includes a **deployment runbook** describing the GitHub Actions + AWS ECR deployment strategy, troubleshooting steps, and rollback guidance.
+
+See: [RUNBOOK.md](./RUNBOOK.md)

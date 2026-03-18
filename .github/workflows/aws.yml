@@ -6,6 +6,9 @@ on:
       - master
     paths-ignore:
       - "README.md"
+      - "RUNBOOK.md"
+      - "Create Self Hosted Runner.png"
+      - "Secrets+Variables For Yaml.png"
   workflow_dispatch: # Allows you to run this manually from the Actions tab
 
 permissions:
